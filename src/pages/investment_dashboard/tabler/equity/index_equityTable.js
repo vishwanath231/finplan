@@ -27,18 +27,13 @@ const Equity = () => {
             sortable: true
         },
         {
-            name: <span className='font-weight-bold fs-13'>Asstes</span>,
-            selector: row => row.asset,
+            name: <span className='font-weight-bold fs-13'>Segment</span>,
+            selector: row => row.segment,
             sortable: true
         },
         {
             name: <span className='font-weight-bold fs-13'>Allocation</span>,
             selector: row => row.allocation + '%',
-            sortable: true
-        },
-        {
-            name: <span className='font-weight-bold fs-13'>Segment</span>,
-            selector: row => row.segment,
             sortable: true
         },
         {
@@ -61,36 +56,32 @@ const Equity = () => {
     const data = [
         {
             id: "1",
-            asset: "equity",
-            allocation: 50,
             segment: "Large Cap",
+            allocation: 50,
             fund: "ICICI Prudential Bluechip Fund",
             lumpsum: 6370235,
             sip: 74039,
         },
         {
             id: "2",
-            asset: "equity",
-            allocation: 15,
             segment: "Mid Cap",
+            allocation: 15,
             fund: "HDF Mid-Cap Opportunities Fund",
             lumpsum: 1911071,
             sip: 22212,
         },
         {
             id: "3",
-            asset: "equity",
-            allocation: 20,
             segment: "Contra Cap",
+            allocation: 20,
             fund: "SBI Contra Fund",
             lumpsum: 2548094,
             sip: 29616,
         },
         {
             id: "4",
-            asset: "equity",
-            allocation: 15,
             segment: "Small Cap",
+            allocation: 15,
             fund: "Nippon Indian Small Cap",
             lumpsum: 1911071,
             sip: 222212,

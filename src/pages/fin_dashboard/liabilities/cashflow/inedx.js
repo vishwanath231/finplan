@@ -135,7 +135,7 @@ const IrregularAreaCharts = () => {
                 options={options}
                 series={series}
                 type="area"
-                height="450"
+                height="500"
                 className="apex-charts"
             />
         </React.Fragment>
@@ -191,8 +191,8 @@ const LiabilitiesCashflow = () => {
 
     return (
         <Grid container spacing={2}>
-            <Grid item lg={8} className='w-100'>
-                <div className="card">
+            <Grid item lg={8} className='w-100 ' >
+                <div className="card" >
                     <div className="card-body">
                         <div className='income_chartanalysis'>
                             <div>
@@ -210,7 +210,7 @@ const LiabilitiesCashflow = () => {
                 </div>
             </Grid>
             <Grid item lg={4} className='w-100'>
-                <div className="card w-100">
+                <div className="card w-100 ">
                     <div className="card-body">
                         <div className='income_chartanalysis'>
                             <div>

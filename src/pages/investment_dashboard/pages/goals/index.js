@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container } from 'reactstrap';
-import GoalsTable from '../../pages/goals/GoalsTable';
+import AddedAssets from './added_goals';
 import GoalsChart from './GoalsChart';
 
 const InvestmentGoals = () => {
@@ -9,10 +9,10 @@ const InvestmentGoals = () => {
             <div className="page-content">
                 <Container fluid>
                     <div className='row'>
-                        <div className="col-lg-8">
-                            <GoalsTable />
+                        <div className="col-lg-9">
+                            <AddedAssets />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-3" >
                             <GoalsChart />
                         </div>
                     </div>

@@ -49,8 +49,8 @@ const GoalsChart = () => {
     return (
         <div>
             <Card>
-                <CardBody>
-                    <div className='mb-4'>
+                <CardBody style={{ height: '470px' }}>
+                    <div className='mb-5'>
                         <div className='h5'>
                             Goals
                         </div>

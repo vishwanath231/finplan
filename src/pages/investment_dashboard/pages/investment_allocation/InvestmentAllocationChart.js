@@ -50,7 +50,7 @@ const InvestmentAllocationChart = () => {
         <div>
             <Card>
                 <CardBody>
-                    <div className='mb-4'>
+                    <div className='mb-5'>
                         <div className='h5'>
                             Investment Allocation
                         </div>

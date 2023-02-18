@@ -19,21 +19,17 @@ const AddedLiabilities = () => {
         loan_type: 'Personal Loan',
         amount: 6400000,
         yearly_interest_rate: '9.00%',
-        monthly_interest_rate: '0.75%',
         start_date: '10-Aug-2021',
         tenure_months: 52,
-        interest: 1352585,
         emi: 149088 
     },
     {
         id: 2,
         loan_type: 'Car Loan',
         amount: 120000,
-        yearly_interest_rate: '7.00%',
         monthly_interest_rate: '0.58%',
         start_date: '10-Aug-2021',
         tenure_months: 16,
-        interest: 0,
         emi: 0
     },
     {
@@ -41,10 +37,8 @@ const AddedLiabilities = () => {
         loan_type: 'Education Loan',
         amount: 30000,
         yearly_interest_rate: '5%',
-        monthly_interest_rate: '0.75%',
         start_date: '10-Aug-2021',
         tenure_months: 52,
-        interest: 1152585,
         emi: 199088
     },
     {
@@ -52,10 +46,8 @@ const AddedLiabilities = () => {
         loan_type: 'Education Loan',
         amount: 50000,
         yearly_interest_rate: '15%',
-        monthly_interest_rate: '0.35%',
         start_date: '10-Aug-2021',
         tenure_months: 52,
-        interest: 1352585,
         emi: 199088
     },
 
@@ -91,10 +83,8 @@ const AddedLiabilities = () => {
                                     <th>Loan type</th>
                                     <th>Amount</th>
                                     <th>Yearly Interest Rate</th>
-                                    <th>Monthly Interest Rate</th>
                                     <th>Start Date</th>
                                     <th>Tenure Months</th>
-                                    <th>Interest</th>
                                     <th>EMI</th>
                                     <th></th>
                                 </tr>
@@ -150,9 +140,6 @@ const AddedLiabilities = () => {
                                                     }
                                                 </td>
                                                 <td>
-                                                   {val.monthly_interest_rate}
-                                                </td>
-                                                <td>
                                                     {
                                                         val.id === showUpdate ?
                                                             <Input type="date" className="form-control" value={val.start_date} id="Started Date" />
@@ -166,7 +153,6 @@ const AddedLiabilities = () => {
                                                         : val.tenure_months
                                                     }
                                                 </td>
-                                                <td>{val.interest}</td>
                                                 <td>{val.emi}</td>
                                                 <td>
                                                     {

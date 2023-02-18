@@ -10,7 +10,7 @@ import Chart from 'react-apexcharts';
 const IncomeCharts = ({ series }) => {
 
     var incomeChartData = {
-        height: 480,
+        height: 455,
         type: 'bar',
         options: {
             chart: {

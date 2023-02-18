@@ -1,7 +1,7 @@
 // ==============================|| DASHBOARD - TOTAL GROWTH BAR CHART ||============================== //
 
 const expenseChartData = {
-    height: 480,
+    height: 645,
     type: 'bar',
     options: {
         chart: {

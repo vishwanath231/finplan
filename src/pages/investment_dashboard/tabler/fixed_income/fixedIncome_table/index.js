@@ -8,6 +8,8 @@ import AddFixedIncomeForm from './AddFixedIncomeForm';
 const InvestFixedIncomeTable = () => {
 
     const [showAddIncome, setShowAddIncome] = useState(false)
+    const [showUpdate, setShowUpdate] = useState(0)
+
 
     const addIncomeHandler = () => setShowAddIncome(true);
     const closeAddIncome = () => setShowAddIncome(false);
@@ -16,42 +18,42 @@ const InvestFixedIncomeTable = () => {
     const [data, setData] = useState([
         {
             id: "1",
-            asset: "Fixed Income",
-            allocation: 35,
             segment: "Gilt",
+            allocation: 35,
             fund: "SBI Magnum Gilt Fund - Growth",
             lumpsum: 4852575,
             sip: 46645,
         },
         {
             id: "2",
-            asset: "Fixed Income",
-            allocation: 20,
             segment: "Medium Duration",
+            allocation: 20,
             fund: "Aditya Birla Sun Life Medium Term Plan - Reg - Growth",
             lumpsum: 2772900,
             sip: 26645,
         },
         {
             id: "3",
-            asset: "Fixed Income",
-            allocation: 25,
             segment: "Credit Risk",
+            allocation: 25,
             fund: "Axis Credit Risk Fund - Growth",
             lumpsum: 3466125,
             sip: 33318,
         },
         {
             id: "4",
-            asset: "Fixed Income",
-            allocation: 20,
             segment: "Short Duration",
+            allocation: 20,
             fund: "Nippon Indian Short Term Fund - Reg - Growth",
             lumpsum: 2772900,
             sip: 26654,
         },
     ]);
 
+
+    const incomeUpdate = (id) => {
+        setShowUpdate(id);
+    }
 
 
 
@@ -77,9 +79,8 @@ const InvestFixedIncomeTable = () => {
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Assets</th>
-                                <th>Allocation</th>
                                 <th>Segment</th>
+                                <th>Allocation</th>
                                 <th>Fund</th>
                                 <th>Lumpsum</th>
                                 <th>SIP</th>
@@ -98,15 +99,62 @@ const InvestFixedIncomeTable = () => {
                                     <React.Fragment key={val.id}>
                                         <tr className='text-muted'>
                                             <td>{val.id}</td>
-                                            <td>{val.asset}</td>
-                                            <td>{val.allocation}</td>
-                                            <td>{val.segment}</td>
-                                            <td>{val.fund}</td>
+                                            <td>
+                                                {
+                                                    val.id === showUpdate ?
+                                                        <select name="" id="" className='form-select'>
+                                                            <option value="">Segment</option>
+                                                            <option value="Liquid">Liquid</option>
+                                                            <option value="Ultra Short Duration">Ultra Short Duration</option>
+                                                            <option value="Low Duration">Low Duration</option>
+                                                            <option value="Money Market">Money Market</option>
+                                                            <option value="Floater">Floater</option>
+                                                            <option value="Short Duration">Short Duration</option>
+                                                            <option value="Medium Duration">Medium Duration</option>
+                                                            <option value="Medium to Long Duration">Medium to Long Duration</option>
+                                                            <option value="Dividend Yield">Dynamic Bond</option>
+                                                            <option value="Dynamic Bond">Corporate Bond</option>
+                                                            <option value="Credit Risk">Credit Risk</option>
+                                                            <option value="Gilt">Gilt</option>
+                                                        </select>
+                                                    : val.segment
+                                                }
+                                            </td>
+                                            <td>
+                                                {
+                                                    val.id === showUpdate ?
+                                                        <Input type="text" className="form-control" id="allocation" placeholder='Allocation' />
+                                                    :val.allocation
+                                                }
+                                            </td>
+                                            <td>
+                                                { 
+                                                    val.id === showUpdate ?
+                                                        <select name="" id="" className='form-select'>
+                                                            <option value="">Fund</option>
+                                                            <option value="ICICI Prudential Gilt Fund - Growth">ICICI Prudential Gilt Fund - Growth</option>
+                                                            <option value="IDFC G Sec Fund - Invt Plan - Growth (Re-launched)">IDFC G Sec Fund - Invt Plan - Growth (Re-launched)</option>
+                                                            <option value="SBI Magnum Gilt Fund - Growth">SBI Magnum Gilt Fund - Growth</option>
+                                                        </select>
+                                                    :val.fund
+                                                }
+                                            </td>
                                             <td>{val.lumpsum}</td>
                                             <td>{val.sip}</td>
                                             <td>
-                                                <button className='addedIncome_edit__btn'><i className="ri-edit-line"></i></button>
-                                                <button className='addedIncome_delete__btn'><i className="ri-delete-bin-line"></i></button>
+                                                {
+                                                    val.id === showUpdate ?
+                                                    <div>
+                                                        <div className='btn'><i className="ri-check-line text-success h4"></i></div>
+                                                        <div className='btn' onClick={() => setShowUpdate(0)}><i className="ri-close-line text-danger h4"></i></div>
+                                                    </div>
+                                                    :
+                                                    <div>
+                                                        <button className='addedIncome_edit__btn' onClick={() => incomeUpdate(val.id)}><i className="ri-edit-line"></i></button>
+                                                        <button className='addedIncome_delete__btn'><i className="ri-delete-bin-line"></i></button>
+                                                    </div>
+                                                }
+
                                             </td>
                                         </tr>
                                     </React.Fragment>

@@ -7,18 +7,6 @@ const AddFixedIncomeForm = ({ closeAddIncome }) => {
             <td>#</td>
             <td>
                 <select name="" id="" className='form-select'>
-                    <option value="">Assets</option>
-                    <option value="Equity">Equity</option>
-                    <option value="Fixed Income">Fixed Income</option>
-                    <option value="Cash">Cash</option>
-                    <option value="Gold">Gold</option>
-                </select>
-            </td>
-            <td>
-                <Input type="text" className="form-control" id="allocation" placeholder='Allocation' />
-            </td>
-            <td>
-                <select name="" id="" className='form-select'>
                     <option value="">Segment</option>
                     <option value="Liquid">Liquid</option>
                     <option value="Ultra Short Duration">Ultra Short Duration</option>
@@ -33,6 +21,9 @@ const AddFixedIncomeForm = ({ closeAddIncome }) => {
                     <option value="Credit Risk">Credit Risk</option>
                     <option value="Gilt">Gilt</option>
                 </select>
+            </td>
+            <td>
+                <Input type="text" className="form-control" id="allocation" placeholder='Allocation' />
             </td>
             <td>
                 <select name="" id="" className='form-select'>

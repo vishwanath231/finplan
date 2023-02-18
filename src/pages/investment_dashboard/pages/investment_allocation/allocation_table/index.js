@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './invest_allocation.css';
 import ReactApexChart from "react-apexcharts";
+import { Input } from '@mui/material';
  
 
 const InvestAllocationTable = () => {
@@ -77,7 +78,13 @@ const InvestAllocationTable = () => {
                                                     <div className='font-weight-bold text-dark'>{val.moderate}</div>
                                                 </td>
                                                 <td>{val.ideal}</td>
-                                                <td>{val.allocation}</td>
+                                                <td>
+                                                    {
+                                                        val.allocation === '' ?
+                                                        ''
+                                                        :< input type="text" value={val.allocation} id="allocation" placeholder='Allocation' />
+                                                    }
+                                                </td>
                                                 <td>{val.sip}</td>
                                                 <td>{val.lumpsum}</td>
                                             </tr>

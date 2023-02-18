@@ -12,9 +12,20 @@ const AddAssetsForm = ({ closeAssets }) => {
                     <option value="Fixed Income">Fixed Income</option>
                     <option value="Gold">Gold</option>
                     <option value="Cash">Cash</option>
+                    <option value="PF/EPFO">PF/EPFO</option>
                     <option value="Other">Other</option>
                 </select>
             </td>
+            <td>
+                <select name="" id="" className='form-select'>
+                    <option value="">Sub Category</option>
+                    <option value="Large Cap">Large Cap</option>
+                    <option value="Mid Cap">Mid Cap</option>
+                    <option value="Samll Cap">Samll Cap</option>
+                    <option value="Equity Mutual Funds">Equity Mutual Funds</option>
+                </select>
+            </td>
+            
             <td>
                 <select name="" id="" className='form-select'>
                     <option value="SIP">SIP</option>

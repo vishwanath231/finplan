@@ -193,18 +193,6 @@ const Navdata = () => {
                     label: "Net Worth",
                     link: "/netWorth",
                     parentId: "finDashboard",
-                },
-                {
-                    id: "emergencyFund",
-                    label: "Emergency Fund",
-                    link: "/comingSoon",
-                    parentId: "finDashboard",
-                },
-                {
-                    id: "termInsurance",
-                    label: "Term Insurance",
-                    link: "/comingSoon",
-                    parentId: "finDashboard",
                 }
             ],
         },

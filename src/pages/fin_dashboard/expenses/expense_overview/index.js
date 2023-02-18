@@ -128,14 +128,14 @@ const ExpensesOverview = () => {
                     <CardBody>
                         <div className='d-flex justify-content-center align-content-center'>
                             <div style={{marginRight: '10px'}}>
-                                <Input className="form-check-input" value='expense_source' type="radio" name="expenseChart" id="flexRadioDefault1" onChange={expensefilterChartChange} />&nbsp;
+                                <Input className="form-check-input" value='expense_source' type="radio" checked={expenseFilterChart === 'expense_source' ? 'checked' : ''} name="expenseChart" id="flexRadioDefault1" onChange={expensefilterChartChange} />&nbsp;
                                 <Label className="form-check-label" htmlFor="flexRadioDefault1">
                                     Expense Source
                                 </Label>
                             </div>
                             <div>
-                                <Input className="form-check-input" value='priority' type="radio" name="expenseChart" id="flexRadioDefault1" onChange={expensefilterChartChange} />&nbsp;
-                                <Label className="form-check-label" htmlFor="flexRadioDefault1">
+                                <Input className="form-check-input" value='priority' type="radio" name="expenseChart" id="priority" onChange={expensefilterChartChange} />&nbsp;
+                                <Label className="form-check-label" htmlFor="priority">
                                     Priority
                                 </Label>
                             </div>
@@ -153,7 +153,7 @@ const ExpensesOverview = () => {
             <Grid item lg={4} className='w-100'>
                 <Card>
                     <CardBody>
-                        <div className='income_chartanalysis mb-4'>
+                        <div className='income_chartanalysis '>
                             <div className='h5'>
                                 {expenseFilterChart === 'expense_source' && 'Expenses Sources' }
                                 {expenseFilterChart === 'priority' && 'Priority' }
@@ -205,6 +205,33 @@ const ExpensesOverview = () => {
                             ) 
                         }
 
+                    </CardBody>
+                </Card>
+                <Card>
+                    <CardBody>
+                        <div className='h5 mb-3'>Expense Management</div>
+                        <div className='border'>
+                            <div className='d-flex justify-content-between align-content-center border-bottom p-2'>
+                                <div></div>
+                                <div className='font-weight-bold'>Now</div>
+                                <div className='font-weight-bold'>Post Retirement</div>
+                            </div>
+                            <div className='d-flex justify-content-between align-content-center border-bottom p-2'>
+                                <div className=''>Need</div>
+                                <div className='w-100 text-center text-success font-weight-bold'>&nbsp; Y</div>
+                                <div className='w-100 text-center text-success font-weight-bold'>Y</div>
+                            </div>
+                            <div className='d-flex justify-content-between align-content-center border-bottom p-2'>
+                                <div>Desire</div>
+                                <div className='w-100 text-center text-success font-weight-bold'>Y</div>
+                                <div className='w-100 text-center text-success font-weight-bold'>Y</div>
+                            </div>
+                            <div className='d-flex justify-content-between align-content-center p-2'>
+                                <div>Dream</div>
+                                <div className='w-100 text-center text-success font-weight-bold'>Y</div>
+                                <div className='w-100 text-center text-success font-weight-bold'>Y</div>
+                            </div>
+                        </div>
                     </CardBody>
                 </Card>
             </Grid>

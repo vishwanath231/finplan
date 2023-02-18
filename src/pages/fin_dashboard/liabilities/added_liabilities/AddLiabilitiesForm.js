@@ -31,14 +31,12 @@ const AddLiabilitiesForm = ({ closeLiabilities }) => {
             <td>
                 <Input type="text" className="form-control" id="income" placeholder='Yearly Interest rate' />
             </td>
-            <td>0</td>
             <td>
                 <Input type="date" className="form-control" id="Started Date" />
             </td>
             <td>
                 <Input type="text" className="form-control" id="Yearly-raise" placeholder='Tenure Months' />
             </td>
-            <td>0</td>
             <td>0</td>
             <td>
                 <button className='addedLoans_add__btn'><i className="ri-add-circle-line"></i></button>

@@ -7,18 +7,6 @@ const AddEquityForm = ({ closeAddIncome }) => {
             <td>#</td>
             <td>
                 <select name="" id="" className='form-select'>
-                    <option value="">Assets</option>
-                    <option value="Equity">Equity</option>
-                    <option value="Fixed Income">Fixed Income</option>
-                    <option value="Cash">Cash</option>
-                    <option value="Gold">Gold</option>
-                </select>
-            </td>
-            <td>
-                <Input type="text" className="form-control" id="allocation" placeholder='Allocation' />
-            </td>
-            <td>
-                <select name="" id="" className='form-select'>
                     <option value="">Segment</option>
                     <option value="Large Cap">Large Cap</option>
                     <option value="Mid Cap">Mid Cap</option>
@@ -34,6 +22,10 @@ const AddEquityForm = ({ closeAddIncome }) => {
                     <option value="Flexicap">Flexicap</option>
                 </select>
             </td>
+            <td>
+                <Input type="text" className="form-control" id="allocation" placeholder='Allocation' />
+            </td>
+            
             <td>
                 <select name="" id="" className='form-select'>
                     <option value="">Fund</option>

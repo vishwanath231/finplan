@@ -1,7 +1,7 @@
 // ==============================|| DASHBOARD - TOTAL GROWTH BAR CHART ||============================== //
 
 const investmentChartData = {
-    height: 480,
+    height: 310,
     type: 'bar',
     options: {
         chart: {

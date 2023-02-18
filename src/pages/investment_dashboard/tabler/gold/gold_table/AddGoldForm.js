@@ -7,25 +7,21 @@ const AddGoldForm = ({ closeAddIncome }) => {
             <td>#</td>
             <td>
                 <select name="" id="" className='form-select'>
-                    <option value="">Assets</option>
-                    <option value="Equity">Equity</option>
-                    <option value="Fixed Income">Fixed Income</option>
-                    <option value="Cash">Cash</option>
-                    <option value="Gold">Gold</option>
+                    <option value="">Segment</option>
+                    <option value="Physical Gold">Physical Gold</option>
+                    <option value="Mutual Funds">Mutual Funds</option>
+                    <option value="Sovereign Gold Bonds">Sovereign Gold Bonds</option>
                 </select>
             </td>
             <td>
                 <Input type="text" className="form-control" id="allocation" placeholder='Allocation' />
             </td>
             <td>
-                <Input type="text" className="form-control" id="allocation" placeholder='Segment' />
-            </td>
-            <td>
                 <select name="" id="" className='form-select'>
                     <option value="">Fund</option>
-                    <option value="ICICI Prudential Gilt Fund - Growth">ICICI Prudential Gilt Fund - Growth</option>
-                    <option value="IDFC G Sec Fund - Invt Plan - Growth (Re-launched)">IDFC G Sec Fund - Invt Plan - Growth (Re-launched)</option>
-                    <option value="SBI Magnum Gilt Fund - Growth">SBI Magnum Gilt Fund - Growth</option>
+                    <option value="HDFC Gold">HDFC Gold</option>
+                    <option value="Nippon India Gold Savings">Nippon India Gold Savings</option>
+                    <option value="SBI Gold">SBI Gold</option>
                 </select>
             </td>
             <td>0</td>
