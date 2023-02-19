@@ -1,4 +1,4 @@
-import { Grid } from '@mui/material';
+import { Checkbox, FormControlLabel, FormGroup, Grid } from '@mui/material';
 import React, { useState } from 'react';
 import ReactApexChart from 'react-apexcharts';
 import Chart from 'react-apexcharts';
@@ -218,18 +218,30 @@ const ExpensesOverview = () => {
                             </div>
                             <div className='d-flex justify-content-between align-content-center border-bottom p-2'>
                                 <div className=''>Need</div>
-                                <div className='w-100 text-center text-success font-weight-bold'>&nbsp; Y</div>
-                                <div className='w-100 text-center text-success font-weight-bold'>Y</div>
+                                <div className='w-100 text-center text-success font-weight-bold'>&nbsp;&nbsp; 
+                                    <input type="checkbox" name="" id="" />
+                                </div>
+                                <div className='w-100 text-center text-success font-weight-bold'>
+                                    <input type="checkbox" name="" id="" />
+                                </div>
                             </div>
                             <div className='d-flex justify-content-between align-content-center border-bottom p-2'>
                                 <div>Desire</div>
-                                <div className='w-100 text-center text-success font-weight-bold'>Y</div>
-                                <div className='w-100 text-center text-success font-weight-bold'>Y</div>
+                                <div className='w-100 text-center text-success font-weight-bold'>
+                                    <input type="checkbox" name="" id="" />
+                                </div>
+                                <div className='w-100 text-center text-success font-weight-bold'>
+                                    <input type="checkbox" name="" id="" />
+                                </div>
                             </div>
                             <div className='d-flex justify-content-between align-content-center p-2'>
                                 <div>Dream</div>
-                                <div className='w-100 text-center text-success font-weight-bold'>Y</div>
-                                <div className='w-100 text-center text-success font-weight-bold'>Y</div>
+                                <div className='w-100 text-center text-success font-weight-bold'>
+                                    <input type="checkbox" name="" id="" />
+                                </div>
+                                <div className='w-100 text-center text-success font-weight-bold'>
+                                    <input type="checkbox" name="" id="" />
+                                </div>
                             </div>
                         </div>
                     </CardBody>
